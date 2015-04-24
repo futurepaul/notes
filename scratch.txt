@@ -2,3 +2,17 @@ hey
 yo yo yo
 hey hye hey hey
 okay this is the new test with [] args
+guards in randos??
+hey hey hye
+hey hey hey
+hey
+what
+hey
+
+hey
+I can do stuff now!
+okay okay okay!
+oku
+what is going on?    IO.ANSI.reset
+I have a new idea!
+and more and more ideas!
