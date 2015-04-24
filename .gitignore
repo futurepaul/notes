@@ -2,10 +2,5 @@
 /deps
 erl_crash.dump
 *.ez
-notes.txt
-programming.txt
-philosophy.txt
-science.txt
-ethics.txt
-god.txt
+*.txt
 .notes
