@@ -11,9 +11,16 @@ defmodule Notes do
     |> List.first
   end
   defp write_loop(target) do
+    {:ok, dest_file} = File.read(".notes")
+    [dest|_] = String.split(dest_file, "\n")
+    purtify = IO.ANSI.magenta <> "***" <> IO.ANSI.reset
     case target do
-      target when target in ["notes", "programming", "philosophy", "science", "ethics", "god"] -> {:ok, file} = File.open("#{target}.txt", [:append])
-      _ -> {:ok, file} = File.open("scratch.txt", [:append])
+      target when target in ["notes", "programming", "philosophy", "science", "ethics", "god"] ->
+        {:ok, file} = File.open(dest <> "#{target}.txt", [:append])
+        IO.puts(purtify <> dest <> "#{target}.txt" <> purtify)
+      _ ->
+        {:ok, file} = File.open(dest <> "scratch.txt", [:append])
+        IO.puts(purtify <> dest <> "scratch.txt" <> purtify)
     end
     write_loop(target, file)
   end
