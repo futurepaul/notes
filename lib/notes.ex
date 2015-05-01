@@ -11,7 +11,8 @@ defmodule Notes do
     |> List.first
   end
   defp write_loop(target) do
-    {:ok, dest_file} = File.read(".notes")
+    home_dir = Path.expand("~")
+    {:ok, dest_file} = File.read(home_dir <> "/.notes")
     [dest|_] = String.split(dest_file, "\n")
     purtify = IO.ANSI.magenta <> "***" <> IO.ANSI.reset
     case target do
