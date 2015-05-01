@@ -16,7 +16,7 @@ Run ```$ mix escript.build``` to compile the binary.
 
 Finally, create a .notes file in your home directory with a path to where you want the notes to end up.
 
-Oh, and put the notes binary somewhere it can be run from, or add the notes directory to your PATH (my .bash_profile includes the line "export PATH=~/dev/elixir/notes:$PATH" for example)
+Oh, and put the notes binary somewhere it can be run from, or add the notes directory to your PATH (my .bash_profile includes the line ```export PATH=~/dev/elixir/notes:$PATH``` for example)
 
 Now just run ```$ notes``` from wherever and you should get a prompt allowing you to append lines to scratch.txt. If you run ```$ notes programming``` it will append to programming.txt, and so on.
 
